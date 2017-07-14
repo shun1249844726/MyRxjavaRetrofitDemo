@@ -1,7 +1,3 @@
-# MyRxjavaRetrofitDemo
-retrofit2  rxjava demo
-
-
 ### 一、添加各个依赖的包
  ```
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
@@ -236,4 +232,8 @@ private Observer<LoginResult> subscribe ;
 在onNext中即可以获取到服务器返回来的信息。
 
 大功告成。师父领进门，修行在个人。继续努力。
+
+
+
+偷偷告诉你 项目地址 　[retrofit2 rxjava demo](https://github.com/shun1249844726/MyRxjavaRetrofitDemo/tree/master)
 
