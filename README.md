@@ -1,5 +1,5 @@
 ### 一、添加各个依赖的包
- ```
+ ```java
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
@@ -24,15 +24,15 @@
 
  项目 地址  [Retrofit](https://github.com/square/retrofit)
 
-1. 导入 `compile 'com.squareup.retrofit2:retrofit:2.3.0'`
+1. 导入 ```java compile 'com.squareup.retrofit2:retrofit:2.3.0'```
 
 2. 在`~/retrofit-adapters` 中我们可以看到需要使用的执行默认回调的适配器。需要导入` ~/retrofit-adapters/rxjava2`中 看到的  
-```
+```java
 compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
 ```
 
 3. 导入`~/retrofit/retrofit-converters`中说到的转换器 我们使用gson所以导入`~/retrofit/retrofit-converters/gson`下说的
-```
+```java
 compile 'com.squareup.retrofit2:converter-gson:2.3.0'
 ```
 
@@ -41,7 +41,7 @@ compile 'com.squareup.retrofit2:converter-gson:2.3.0'
 项目地址 [RxAndroid：Android](https://github.com/ReactiveX/RxAndroid)
 
 导入需要的
-```
+```java
 compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 // Because RxAndroid releases are few and far between, it is recommended you also
 // explicitly depend on RxJava's latest version for bug fixes and new features.
@@ -50,13 +50,13 @@ compile 'io.reactivex.rxjava2:rxjava:2.1.0'
 
 #### 3、 导入 gson 库
 项目地址 [gson](http://www.mvnrepository.com/artifact/com.google.code.gson/gson/2.8.1)
-```
+```java
 compile group: 'com.google.code.gson', name: 'gson', version: '2.8.1'
 ```
 #### 4、buttonknife库
 项目地址[Butter Knife](http://jakewharton.github.io/butterknife/)
    导入
-```
+```java
 compile 'com.jakewharton:butterknife:8.7.0'
 annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
 ```
@@ -73,13 +73,12 @@ annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
 ##开始使用
 我们使用机房监控系统的登陆接口来测试。
 #### 1、添加联网权限
-```
+```java
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 ```
 #### 2、定义返回的数据模型类
-```
-
+```java
 public class LoginResult {
     /**
      * success : 0
@@ -134,7 +133,7 @@ public class LoginResult {
 
 ```
 #### 3、定义一个接口 
-```
+```java
 public interface LoginService {
 
     @FormUrlEncoded
@@ -145,7 +144,7 @@ public interface LoginService {
 注意使用@Field 注解的时候要用@FormUrlEncoded保证他的编码格式与URL的一致，官方有说道。
 #### 4、定义一个类专门用来处理登陆的函数。
 
-```
+```java
 public class LoginMethod {
     public static final String BASE_LOGIN_URL = "http://*******/";
     private  static final  int DEFAULT_TIMEOUT = 5;
@@ -201,7 +200,7 @@ public class LoginMethod {
 
 其中 subscribe 为；
 
-```
+```java
 private Observer<LoginResult> subscribe ;
         
         
